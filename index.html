@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es-CR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f5ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mi Ruta">
+  <meta name="description" content="Tu academia bonita para estudiar el examen teórico de manejo de Costa Rica: lecciones, voz, prácticas, simulacros y guardado de avances por cuenta.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>Mi Ruta ✨ · Academia de manejo CR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <button id="brand" class="brand" aria-label="Ir al inicio"><span class="brand-symbol">✦</span><span>mi<span class="brand-strong">ruta</span><small>ACADEMIA DE MANEJO</small></span></button>
+      <div class="top-actions"><span id="xp-pill" class="xp-pill">⭐ 0 pts</span><button class="avatar-button" id="avatar-btn" aria-label="Personalizar perfil">🌸</button></div>
+    </header>
+    <main id="main" tabindex="-1" aria-live="polite"></main>
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <button data-nav="home" class="nav-btn active"><span class="nav-icon">⌂</span><span>Inicio</span></button>
+      <button data-nav="topics" class="nav-btn"><span class="nav-icon">▦</span><span>Temas</span></button>
+      <button data-nav="practice" class="nav-btn"><span class="nav-icon">✎</span><span>Practicar</span></button>
+      <button data-nav="exams" class="nav-btn"><span class="nav-icon">🏆</span><span>Examen</span></button>
+      <button data-nav="profile" class="nav-btn"><span class="nav-icon">♡</span><span>Mi espacio</span></button>
+    </nav>
+  </div>
+  <div id="modal" class="modal-wrap hidden" role="presentation"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="config.js"></script>
+  <script src="cloud.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

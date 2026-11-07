@@ -1,0 +1,9 @@
+MI RUTA — AMPLIACIÓN DE CONTENIDO
+
+Esta entrega amplía la versión anterior con 24 guías explicativas vinculadas a páginas concretas de los PDF, además de las 45 lecciones iniciales y los simulacros. Las 31 páginas visuales de los manuales se conservan en la biblioteca.
+
+IMPORTANTE: Esta versión NO constituye una transcripción exhaustiva, palabra por palabra, de todos los cuadros y cifras de los PDF. Los detalles legales y cifras deben contrastarse con normativa oficial vigente. Los simulacros son prácticas originales, no exámenes oficiales.
+
+Para abrir en iPhone: subir todos los archivos del ZIP a un sitio HTTPS (por ejemplo GitHub Pages); abrir el sitio en Safari y seleccionar Compartir > Agregar a Inicio. El archivo index.html solo no basta: requiere los demás archivos.
+
+Cuentas reales y sincronización: requieren configuración segura de Supabase; sin ella, el guardado se realiza localmente. Notificaciones push fuera de la aplicación no están activadas.

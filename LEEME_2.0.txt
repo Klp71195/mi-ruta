@@ -1,0 +1,68 @@
+MI RUTA 2.0 - Cuentas personales, avance y motivación para el examen de manejo
+================================================================================
+
+¿Qué incluye?
+- Los 15 temas y 45 lecciones de la versión anterior, con lecturas en voz alta.
+- Las preguntas de práctica, simulacros y todas las páginas de ambos manuales.
+- Registro e inicio de sesión individuales por correo + contraseña (al conectar Supabase).
+- Avance individual en las lecciones, notas/apuntes por lección, historial de notas
+  (calificaciones) de simulacros y persistencia de una práctica en curso.
+- Almacenamiento local inmediato y sincronización con la nube de cada cuenta
+  cuando hay conexión; una cuenta nunca usa los datos locales de otra.
+- Mensajes de ánimo que cambian cada día, aviso motivador al abrir la app
+  después de la hora elegida y archivo de calendario para avisos externos.
+- Funciona como invitada sin configurar cuentas (solo en el dispositivo).
+
+ATENCIÓN: LA FUNCIÓN DE CUENTAS NO ESTÁ ACTIVADA TODAVÍA
+No podemos dejar una base de datos real ni correos de usuarios activos sin un
+proyecto propio de backend. Para habilitar cuentas reales, seguí estos pasos:
+
+1. Crear un proyecto en https://supabase.com (se necesita una cuenta).
+2. En el proyecto, abrir SQL Editor y ejecutar base_de_datos.sql.
+3. Ir a Settings > API o la sección Connect (según panel) y copiar:
+   - Project URL: https://<id>.supabase.co
+   - publishable key (sb_publishable_...) o antigua anon public key.
+   Jamás usar aquí la secret key ni la service_role key.
+4. Editar config.js y rellenar SUPABASE_URL y SUPABASE_ANON_KEY.
+5. En Authentication > Providers > Email, mantener habilitado el inicio
+   de sesión por correo. Por seguridad, se recomienda confirmar el email.
+6. En Authentication > URL Configuration, colocar la URL HTTPS de la app
+   publicada como Site URL y como URL de redirección permitida.
+7. Publicar el CONTENIDO de esta carpeta en GitHub Pages (incluyendo subcarpetas).
+   Settings > Pages > Deploy from a branch > main > / (root).
+8. Abrir la web en Safari del iPhone, tocar Compartir > Agregar a Inicio.
+9. En Mi espacio > Mi cuenta, crear una cuenta, confirmar correo si hace falta
+   e iniciar sesión. Repetir en otro iPhone con la misma cuenta para recuperar
+   lo guardado (requiere conexión en el primer acceso).
+10. Probar dos cuentas distintas y comprobar que NO se muestran los datos ajenos.
+
+FUNCIONAMIENTO Y LÍMITES
+- Cerrar la app no borra avances locales. Si se borran datos del navegador y NO
+  se ha sincronizado, esos datos locales se pueden perder.
+- Cuando la nube falla, los cambios se guardan localmente y se intentan volver
+  a sincronizar con conexión. Si se estudia desde dos dispositivos simultáneamente,
+  pueden producirse conflictos; los datos por tema, notas y simulacros se fusionan
+  con lógica básica, no es una solución de sincronización transaccional perfecta.
+- El estado de preguntas en curso también se guarda por cuenta. Si se retoma
+  un examen cronometrado tras un cierre largo, el tiempo transcurrido sigue contando.
+- Los mensajes dentro de Mi Ruta aparecen AL ABRIR la app después de la hora
+  guardada. No se enviarán avisos push automáticos mientras la app esté cerrada.
+- Archivo MiRuta_Recordatorio.ics: permite intentar importar un evento diario con
+  recordatorio en el calendario, según opciones del dispositivo. No podemos
+  garantizar que Safari importe el .ics automáticamente.
+- Para notificaciones PUSH reales con la app cerrada hace falta otro paso:
+  servidor/servicio que programe y envíe Web Push, suscripciones y permisos de iOS.
+  En iPhone se necesita instalar la web en Inicio y aceptar el permiso.
+- Los simulacros son ejercicios internos de práctica, NO preguntas oficiales.
+  Las reglas, cifras y requisitos de los PDF deben contrastarse con fuentes
+  oficiales actualizadas.
+- Se debe configurar un remitente SMTP apropiado si el proyecto crece o se
+  quiere usar confirmación de cuenta y recuperación de contraseña en producción.
+
+PRIVACIDAD
+- Cada cuenta tiene control de acceso por Row Level Security (RLS).
+- No almacenar passwords en tablas propias; Supabase Auth los gestiona.
+- Solo publicar la clave pública, NUNCA un secreto del servidor.
+- No compartir el mismo usuario/password con varias personas si querés
+  historiales de estudio separados.
+- Para distribución a otras personas, probar seguridad y privacidad antes.

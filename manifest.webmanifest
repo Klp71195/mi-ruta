@@ -1,0 +1,17 @@
+{
+  "id":"./",
+  "name":"Mi Ruta · Academia de Manejo",
+  "short_name":"Mi Ruta ✨",
+  "description":"Aprendé el examen teórico de manejo de Costa Rica con lecciones fáciles, audio, ejemplos, prácticas y simulacros.",
+  "lang":"es-CR",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"portrait-primary",
+  "background_color":"#f8f5ff",
+  "theme_color":"#f8f5ff",
+  "icons":[
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}
